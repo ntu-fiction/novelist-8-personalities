@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Kokoro";
-  src: url("fonts/Kokoro.otf") format("opentype");
+  src: url("fonts/Kokoro-min.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "ShipporiMincho-Regular";
-  src: url("fonts/ShipporiMincho-Regular.ttf") format("truetype");
+  font-family: "ShipporiMincho";
+  src: url("fonts/ShipporiMincho-min.ttf") format("truetype");
 }
 
 @keyframes fadeInUp {
