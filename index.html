@@ -1,0 +1,361 @@
+<!doctype html>
+
+<html lang="zh-hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小説家八型人格測驗</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="styles.css?v=1.0" rel="stylesheet" />
+  </head>
+
+  <body class="container">
+    <header>
+      <h1>小説家八型人格測驗</h1>
+    </header>
+
+    <main class="container">
+      <!-- 測驗介紹 -->
+      <div id="introBlock" class="question-block active">
+        <p class="description">
+          給任何想要了解自己創意潛力的你。透過輕鬆有趣的問題，測驗將幫助你發掘自己的思考模式、表達方式以及面對問題的態度。無論是否從事創作，這個測驗都能讓你更了解自己，發現潛藏的創意特質。想知道自己的小說家人格嗎？趕快來測一下！
+        </p>
+        <button class="btn" onclick="startQuiz()">開始測驗</button>
+      </div>
+
+      <!-- 第一個問題 -->
+      <div id="block1" class="question-block">
+        <p>比起腦中的幻想，我更關注現實世界的人事物？</p>
+        <ul>
+          <li>
+            <button class="btn" onclick="jumpToBlock('block1', 'block2')">
+              是
+            </button>
+          </li>
+          <li>
+            <button class="btn" onclick="jumpToBlock('block1', 'block3')">
+              否
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 第二個問題 -->
+      <div id="block2" class="question-block">
+        <p>面對難解的社會問題時，我通常會：</p>
+        <ul>
+          <li>
+            <button class="btn" onclick="jumpToBlock('block2', 'block5')">
+              太難解了，還是先關注自己吧
+            </button>
+          </li>
+          <li>
+            <button class="btn" onclick="jumpToBlock('block2', 'block5')">
+              搜尋過去是否發生過類似問題
+            </button>
+          </li>
+          <li>
+            <button class="btn" onclick="jumpToBlock('block2', 'block4')">
+              深入研究問題背後的問題
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 第三個問題 -->
+      <div id="block3" class="question-block">
+        <p>觀看作品時，我更關注：</p>
+        <ul>
+          <li>
+            <button class="btn" onclick="jumpToBlock('block3', 'block8')">
+              角色的內心
+            </button>
+          </li>
+          <li>
+            <button class="btn" onclick="jumpToBlock('block3', 'block4')">
+              故事的情節
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 第四個問題 -->
+      <div id="block4" class="question-block">
+        <p>面對一個你無法理解的現象時，你通常會：</p>
+        <ul>
+          <li>
+            <button class="btn" onclick="jumpToBlock('block4', 'block9')">
+              試圖找出背後的原因
+            </button>
+          </li>
+          <li>
+            <button class="btn" onclick="jumpToBlock('block4', 'block8')">
+              欣賞現象的神秘感
+            </button>
+          </li>
+          <li>
+            <button class="btn" onclick="jumpToBlock('block4', 'block5')">
+              試圖回憶類似的事情，並進行比較
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 第五個問題 -->
+      <div id="block5" class="question-block">
+        <p>當我看到獨特的事件發生時，我習慣先：</p>
+        <ul>
+          <li>
+            <button class="btn" onclick="jumpToBlock('block5', 'block6')">
+              拿相機紀錄
+            </button>
+          </li>
+          <li>
+            <button class="btn" onclick="jumpToBlock('block5', 'block7')">
+              放在心裡回味
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 第六個問題 -->
+      <div id="block6" class="question-block">
+        <p>如果你有時間旅行的能力，你會？</p>
+        <ul>
+          <li>
+            <button class="btn" onclick="showResult('naturalist')">
+              回到過去，研究古老的風土人情
+            </button>
+          </li>
+          <li>
+            <button class="btn" onclick="showResult('prophet')">
+              前往未來，探索科技的進步和人類的演變
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 第七個問題 -->
+      <div id="block7" class="question-block">
+        <p>你如何面對過去的傷痛？</p>
+        <ul>
+          <li>
+            <button class="btn" onclick="showResult('gravedigger')">
+              反思這些傷痛的來源，並試圖從中找出意義
+            </button>
+          </li>
+          <li>
+            <button class="btn" onclick="showResult('emo')">
+              深刻感受到傷痛，並用強烈的情感去表達
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 第八個問題 -->
+      <div id="block8" class="question-block">
+        <p>「如果時間可以停止在最美好的時刻就好了。」</p>
+        <ul>
+          <li>
+            <button class="btn" onclick="jumpToBlock('block8', 'block11')">
+              雖然如此，殘酷有時也是一種美
+            </button>
+          </li>
+          <li>
+            <button class="btn" onclick="jumpToBlock('block8', 'block10')">
+              對
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 第九個問題 -->
+      <div id="block9" class="question-block">
+        <p>比起測驗結果，我更想知道這個測驗是怎麼設計的。</p>
+        <ul>
+          <li>
+            <button class="btn" onclick="showResult('magician')">是</button>
+          </li>
+          <li>
+            <button class="btn" onclick="showResult('philosopher')">否</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 第十個問題 -->
+      <div id="block10" class="question-block">
+        <p>我不是真的想停止時間。</p>
+        <ul>
+          <li>
+            <button class="btn" onclick="showResult('foreverYoung')">對</button>
+          </li>
+          <li>
+            <button class="btn" onclick="showResult('magician')">
+              真的有點想停止
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 第十一個問題 -->
+      <div id="block11" class="question-block">
+        <p>當我受作品感動時，常常是因為：</p>
+        <ul>
+          <li>
+            <button class="btn" onclick="jumpToBlock('block11', 'block7')">
+              與角色內心產生共鳴
+            </button>
+          </li>
+          <li>
+            <button class="btn" onclick="showResult('shaman')">
+              感受到一種超越人類的美
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 結果區域 -->
+
+      <!-- 博物學家 -->
+      <div id="naturalist" class="question-block">
+        <img src="images/naturalist.jpeg" />
+        <div class="card-body">
+          <h5 class="card-title">測驗結果</h5>
+          <p class="card-text">博物學家</p>
+          <p class="represent">代表作家：吳明益、恩内斯托・薩巴托</p>
+          <p>
+            與其說書寫癖或收集癖，對你而言「描述事物」本身可能就能帶來快感，越多事物，越多快感。你追求一種十九世紀博物學家的琳瑯滿目，物理學家認為簡潔就是美，你認為繁複就是美。你喜愛維基百科，但更愛那些英文版維基百科也沒寫的東西。從一個條目連到另一個網頁時，如果有人問你文學是什麼？可能你會回答：關聯性。
+          </p>
+          <button class="btn btn-secondary" onclick="resetQuiz()">
+            再測一次
+          </button>
+        </div>
+      </div>
+
+      <!-- 預言家 -->
+      <div id="prophet" class="question-block">
+        <img src="images/prophet.jpeg" />
+        <div class="card-body">
+          <h5 class="card-title">測驗結果</h5>
+          <p class="card-text">預言家</p>
+          <p class="represent">代表作家：歐威爾、薩拉馬戈、赫胥黎</p>
+          <p>
+            未來不是對現在的預言，而是對現在的指涉。不過如果恰巧可以，你也不介意預測未來。哲學家的做法對你來說太生硬了：讀者是劇情的高敏患者，對未來卻標準寬鬆。未來是你的黑幕，你的道具盒，與魔術師的區別在於：你真的有想表達些什麼。
+          </p>
+          <button class="btn btn-secondary" onclick="resetQuiz()">
+            再測一次
+          </button>
+        </div>
+      </div>
+
+      <!-- 掘墓人 -->
+      <div id="gravedigger" class="question-block">
+        <img src="images/gravedigger.jpeg" />
+        <div class="card-body">
+          <h5 class="card-title">測驗結果</h5>
+          <p class="card-text">掘墓人</p>
+          <p class="represent">代表作家：普魯斯特、安妮・艾諾、石黑一雄</p>
+          <p>
+            朋友揪你看復仇者聯盟時你還在關心蝙蝠俠的童年創傷。小時候最喜歡聽長輩講家族故事、對童年時期的事情印象深刻，忘不了前任的事。你如果有寫日記，必定十分精彩，但並非內容，而是你記憶事情的方式，充滿魔力。
+          </p>
+          <button class="btn btn-secondary" onclick="resetQuiz()">
+            再測一次
+          </button>
+        </div>
+      </div>
+
+      <!-- 依某系 -->
+      <div id="emo" class="question-block">
+        <img src="images/emo.jpeg" />
+        <div class="card-body">
+          <h5 class="card-title">測驗結果</h5>
+          <p class="card-text">依某系</p>
+          <p class="represent">代表作家：太宰治、邱妙津</p>
+          <p>
+            別人在經營類型、發掘內容，就你在 E。你的 EMO 自成一格，E
+            出新意。世界在你心底繁衍出另個世界，每種情緒、每種感受都有新的名字，像一株新的花草。別人說你憂鬱，你卻說心是宇宙的倒影。
+          </p>
+          <button class="btn btn-secondary" onclick="resetQuiz()">
+            再測一次
+          </button>
+        </div>
+      </div>
+
+      <!-- 魔術師 -->
+      <div id="magician" class="question-block">
+        <img src="images/magician.jpeg" />
+        <div class="card-body">
+          <h5 class="card-title">測驗結果</h5>
+          <p class="card-text">魔術師</p>
+          <p class="represent">代表作家：波赫士、卡爾維諾、姜峯楠</p>
+          <p>
+            簡單來說，你喜歡有趣的東西。你喜歡魔術，也喜歡魔術道具，不過更讓你著迷的是魔術手法。你不會停留在有趣的表面，而是不停深入，直至找到有趣的原因與核心。你喜歡感動，但不一定追求感動；喜歡道理，但不愛講道理。一切都是道具，做做效果。著迷對你就是最大的稱讚。
+          </p>
+          <button class="btn btn-secondary" onclick="resetQuiz()">
+            再測一次
+          </button>
+        </div>
+      </div>
+
+      <!-- 哲學家 -->
+      <div id="philosopher" class="question-block">
+        <img src="images/philosopher.jpeg" />
+        <div class="card-body">
+          <h5 class="card-title">測驗結果</h5>
+          <p class="card-text">哲學家</p>
+          <p class="represent">代表作家：米蘭・昆德拉、勒瑰恩</p>
+          <p>
+            對真正的哲學家來說，你只是個寫小說的；對其他小說家而言，你又太愛講道理了。不，你才不熱愛講道理，更不熱愛爭辯——你展示它們，藉由世界與故事。
+          </p>
+          <button class="btn btn-secondary" onclick="resetQuiz()">
+            再測一次
+          </button>
+        </div>
+      </div>
+
+      <!-- 永恆少年 -->
+      <div id="foreverYoung" class="question-block">
+        <img src="images/foreverYoung.jpeg" />
+        <div class="card-body">
+          <h5 class="card-title">測驗結果</h5>
+          <p class="card-text">永恆少年</p>
+          <p class="represent">代表作家：村上春樹、歐森・史考特・卡德</p>
+          <p>
+            你喜歡新海誠的電影，或許也曾幻想遠在海王星的女朋友。宇宙對你從不是需要考進NASA才能接觸的存在，清潔阿姨可能是世界的守護者，貓也可能是外星人。宇宙是個巨大的舞台，日常與世界實現對接，如果末日是問題，愛情就是解答。
+          </p>
+          <button class="btn btn-secondary" onclick="resetQuiz()">
+            再測一次
+          </button>
+        </div>
+      </div>
+
+      <!-- 薩滿 -->
+      <div id="shaman" class="question-block">
+        <img src="images/shaman.jpeg" />
+        <div class="card-body">
+          <h5 class="card-title">測驗結果</h5>
+          <p class="card-text">薩滿</p>
+          <p class="represent">代表作家：卡夫卡、馬奎斯、納博科夫</p>
+          <p>
+            對於靈感從何而來這種問題，你從來不知道怎麼回答。但靈感對你又是最親近的，最貼切的動詞是「獲得」，如天上落下的羽毛，不是用頭腦，而是用手，用身體去接。
+          </p>
+          <button class="btn btn-secondary" onclick="resetQuiz()">
+            再測一次
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p id="copyright">&copy; 2024 台大小說賞析社. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
