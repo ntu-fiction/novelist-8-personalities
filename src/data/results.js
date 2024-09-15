@@ -1,7 +1,9 @@
+import Images from "../Images";
+
 const results = {
   naturalist: {
     id: "naturalist",
-    image: "images/naturalist.jpeg",
+    image: Images.naturalist,
     title: "博物學家",
     represent: "代表作家：吳明益、恩内斯托・薩巴托",
     description:
@@ -9,7 +11,7 @@ const results = {
   },
   prophet: {
     id: "prophet",
-    image: "images/prophet.jpeg",
+    image: Images.prophet,
     title: "預言家",
     represent: "代表作家：歐威爾、薩拉馬戈、赫胥黎",
     description:
@@ -17,7 +19,7 @@ const results = {
   },
   gravedigger: {
     id: "gravedigger",
-    image: "images/gravedigger.jpeg",
+    image: Images.gravedigger,
     title: "掘墓人",
     represent: "代表作家：普魯斯特、安妮・艾諾、石黑一雄",
     description:
@@ -25,7 +27,7 @@ const results = {
   },
   emo: {
     id: "emo",
-    image: "images/emo.jpeg",
+    image: Images.emo,
     title: "依某系",
     represent: "代表作家：太宰治、邱妙津",
     description:
@@ -33,7 +35,7 @@ const results = {
   },
   magician: {
     id: "magician",
-    image: "images/magician.jpeg",
+    image: Images.magician,
     title: "魔術師",
     represent: "代表作家：波赫士、卡爾維諾、姜峯楠",
     description:
@@ -41,7 +43,7 @@ const results = {
   },
   philosopher: {
     id: "philosopher",
-    image: "images/philosopher.jpeg",
+    image: Images.philosopher,
     title: "哲學家",
     represent: "代表作家：米蘭・昆德拉、勒瑰恩",
     description:
@@ -49,7 +51,7 @@ const results = {
   },
   foreverYoung: {
     id: "foreverYoung",
-    image: "images/foreverYoung.jpeg",
+    image: Images.foreverYoung,
     title: "永恆少年",
     represent: "代表作家：村上春樹、歐森・史考特・卡德",
     description:
@@ -57,7 +59,7 @@ const results = {
   },
   shaman: {
     id: "shaman",
-    image: "images/shaman.jpeg",
+    image: Images.shaman,
     title: "薩滿",
     represent: "代表作家：卡夫卡、馬奎斯、納博科夫",
     description:
