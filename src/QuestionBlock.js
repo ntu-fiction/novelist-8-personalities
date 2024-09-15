@@ -1,12 +1,16 @@
 import React from "react";
 
 const QuestionBlock = ({ question, jumpToBlock, showResult, animate }) => {
-  const handleOptionClick = (option) => {
+  const handleOptionClick = (option, event) => {
     if (option.targetBlockId && option.targetBlockId.startsWith("block")) {
       jumpToBlock(option.targetBlockId);
     } else {
       showResult(option.targetBlockId);
     }
+
+    // 移除按鈕焦點
+    const button = event.target;
+    button.blur();
   };
 
   return (
@@ -18,7 +22,12 @@ const QuestionBlock = ({ question, jumpToBlock, showResult, animate }) => {
       <ul>
         {question.options.map((option, index) => (
           <li key={index}>
-            <button className="btn" onClick={() => handleOptionClick(option)}>
+            <button
+              className="btn"
+              onClick={(event) => {
+                setTimeout(() => handleOptionClick(option, event), 100);
+              }}
+            >
               {option.text}
             </button>
           </li>

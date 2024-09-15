@@ -20,7 +20,7 @@ function App() {
   // 動畫結束後重置動畫狀態
   useEffect(() => {
     if (animate) {
-      const timer = setTimeout(() => setAnimate(false), 400); // 動畫持續時間
+      const timer = setTimeout(() => setAnimate(false), 500); // 動畫持續時間
       return () => clearTimeout(timer);
     }
   }, [animate]);
