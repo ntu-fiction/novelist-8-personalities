@@ -1,8 +1,11 @@
 import React from "react";
 
-const ResultBlock = ({ result, resetQuiz }) => {
+const ResultBlock = ({ result, resetQuiz, animate }) => {
   return (
-    <div id={result.id} className="question-block">
+    <div
+      id={result.id}
+      className={`question-block ${animate ? "fade-in-up" : ""}`}
+    >
       <img src={result.image} alt={result.title} />
       <div className="card-body">
         <h5 className="card-title">測驗結果</h5>

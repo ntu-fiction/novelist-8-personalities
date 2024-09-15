@@ -1,6 +1,6 @@
 import React from "react";
 
-const QuestionBlock = ({ question, jumpToBlock, showResult }) => {
+const QuestionBlock = ({ question, jumpToBlock, showResult, animate }) => {
   const handleOptionClick = (option) => {
     if (option.targetBlockId && option.targetBlockId.startsWith("block")) {
       jumpToBlock(option.targetBlockId);
@@ -10,7 +10,10 @@ const QuestionBlock = ({ question, jumpToBlock, showResult }) => {
   };
 
   return (
-    <div id={question.id} className="question-block">
+    <div
+      id={question.id}
+      className={`question-block ${animate ? "fade-in-up" : ""}`}
+    >
       <p>{question.text}</p>
       <ul>
         {question.options.map((option, index) => (
