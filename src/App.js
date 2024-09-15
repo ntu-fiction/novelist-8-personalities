@@ -20,7 +20,7 @@ function App() {
   // 動畫結束後重置動畫狀態
   useEffect(() => {
     if (animate) {
-      const timer = setTimeout(() => setAnimate(false), 650); // 動畫持續時間
+      const timer = setTimeout(() => setAnimate(false), 400); // 動畫持續時間
       return () => clearTimeout(timer);
     }
   }, [animate]);
@@ -44,7 +44,7 @@ function App() {
 
   // 網頁主要內容
   return (
-    <div className="container">
+    <>
       <Header />
 
       {currentBlock && currentBlock.startsWith("block") && (
@@ -61,7 +61,7 @@ function App() {
       )}
 
       <Footer />
-    </div>
+    </>
   );
 }
 
