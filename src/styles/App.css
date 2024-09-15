@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Kokoro";
-  src: url("fonts/Kokoro-min.ttf") format("truetype");
+  src: url("../fonts/Kokoro-min.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "ShipporiMincho";
-  src: url("fonts/ShipporiMincho-min.ttf") format("truetype");
+  src: url("../fonts/ShipporiMincho-min.ttf") format("truetype");
 }
 
 @keyframes fadeInUp {
@@ -24,7 +24,7 @@
 
 /* 基本樣式 */
 body {
-  visibility: hidden;
+  /* visibility: hidden; */
   font-family: "ShipporiMincho-Regular", sans-serif;
   background-color: #f2f2f2;
   background-image: linear-gradient(to right, #e2e2e2 1px, transparent 1px),
@@ -45,6 +45,7 @@ body {
   align-items: center;
   padding: 10px;
   width: 100%;
+  max-width: 600px;
   height: 100%;
 }
 
@@ -64,21 +65,17 @@ main {
 }
 
 .question-block {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: 600px;
+
   text-align: center;
   padding: 20px;
   background-color: #ffffff; /* 白色背景 */
   border: 1px solid #cccccc; /* 灰色邊框 */
   border-radius: 15px;
-}
-
-.question-block.active {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .question-block p {
