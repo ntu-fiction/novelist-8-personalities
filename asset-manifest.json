@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/novelist-8-personalities/static/css/main.3aaec5ef.css",
-    "main.js": "/novelist-8-personalities/static/js/main.91570cfb.js",
+    "main.css": "/novelist-8-personalities/static/css/main.d306fee5.css",
+    "main.js": "/novelist-8-personalities/static/js/main.350adeb8.js",
     "static/media/prophet.jpeg": "/novelist-8-personalities/static/media/prophet.1b7c75a508559c3d5244.jpeg",
     "static/media/emo.jpeg": "/novelist-8-personalities/static/media/emo.e69c83cdd68498077252.jpeg",
     "static/media/naturalist.jpeg": "/novelist-8-personalities/static/media/naturalist.c21b93e1919b3a473e2b.jpeg",
@@ -13,11 +13,11 @@
     "static/media/foreverYoung.jpeg": "/novelist-8-personalities/static/media/foreverYoung.5ae01e7f7f9d554ef1d8.jpeg",
     "static/media/Kokoro-min.ttf": "/novelist-8-personalities/static/media/Kokoro-min.5cced8eceb116bdd6d5a.ttf",
     "index.html": "/novelist-8-personalities/index.html",
-    "main.3aaec5ef.css.map": "/novelist-8-personalities/static/css/main.3aaec5ef.css.map",
-    "main.91570cfb.js.map": "/novelist-8-personalities/static/js/main.91570cfb.js.map"
+    "main.d306fee5.css.map": "/novelist-8-personalities/static/css/main.d306fee5.css.map",
+    "main.350adeb8.js.map": "/novelist-8-personalities/static/js/main.350adeb8.js.map"
   },
   "entrypoints": [
-    "static/css/main.3aaec5ef.css",
-    "static/js/main.91570cfb.js"
+    "static/css/main.d306fee5.css",
+    "static/js/main.350adeb8.js"
   ]
 }
