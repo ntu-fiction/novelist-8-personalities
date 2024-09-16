@@ -5,7 +5,7 @@ import ResultBlock from "./ResultBlock";
 import Footer from "./Footer";
 import questions from "./data/questions";
 import results from "./data/results";
-import "./styles/App.css";
+import "./App.css";
 
 function App() {
   const [currentBlock, setCurrentBlock] = useState("blockIntro");

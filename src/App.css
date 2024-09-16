@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Kokoro";
-  src: url("../fonts/Kokoro-min.ttf") format("truetype");
+  src: url("./fonts/Kokoro-min.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "ShipporiMincho";
-  src: url("../fonts/ShipporiMincho-min.ttf") format("truetype");
+  src: url("./fonts/ShipporiMincho-min.ttf") format("truetype");
 }
 
 @keyframes fadeInUp {
@@ -102,11 +102,11 @@ ul {
   padding: 0;
 }
 
-.card-title {
+.result-title {
   font-size: 1.5rem;
 }
 
-.card-text {
+.result-text {
   background-color: #cdedf9;
   font-size: 1.75rem;
 }
